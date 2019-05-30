@@ -3,6 +3,7 @@ import 'TextWidget.dart';
 import 'ContainerWidget.dart';
 import 'ImageWidget.dart';
 import 'ExpandedWidget.dart';
+import 'ListViewWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,13 +13,13 @@ class MyApp extends StatelessWidget {
     appBar: new AppBar(
       title: Text('appbar title'),
     ),
-    body: new Text('asdfasdf', style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 12),),
+    body: new ListViewWidget(),
   );
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'test',
-      home: new ExpandedWidget(),
+      home: widget,
     );
   }
 }
