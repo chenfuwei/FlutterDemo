@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'TextWidget.dart';
 import 'ContainerWidget.dart';
 import 'ImageWidget.dart';
+import 'ExpandedWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'test',
-      home: new ImageWidget(),
+      home: new ExpandedWidget(),
     );
   }
 }
