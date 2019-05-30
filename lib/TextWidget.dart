@@ -29,10 +29,24 @@ class TextWidget extends StatelessWidget
           new Text(
             '加粗 24号 上斜虚线',
             style: new TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
+                fontSize: 12,
                 decoration: TextDecoration.overline,
                 decorationStyle: TextDecorationStyle.dotted
+            ),
+          ),
+          new Text.rich(
+            new TextSpan(
+              text:'Hello',
+              children: <TextSpan>[
+                new TextSpan(
+                  text: 'world',
+                  style: new TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    decoration: TextDecoration.none
+                  ),
+                ),
+              ],
             ),
           ),
         ],
