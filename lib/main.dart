@@ -6,6 +6,7 @@ import 'ExpandedWidget.dart';
 import 'ListViewWidget.dart';
 import 'HorizontalListViewWidget.dart';
 import 'CountsListViewWidget.dart';
+import 'SparatedListViewWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     appBar: new AppBar(
       title: Text('appbar title'),
     ),
-    body: new CountsListViewWidget(),
+    body: new SparatedListViewWidget(),
   );
   @override
   Widget build(BuildContext context) {
