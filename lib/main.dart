@@ -8,6 +8,8 @@ import 'HorizontalListViewWidget.dart';
 import 'CountsListViewWidget.dart';
 import 'SparatedListViewWidget.dart';
 import 'CustomListViewWidget.dart';
+import 'PageAppBar.dart';
+import 'CountWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,12 +19,11 @@ class MyApp extends StatelessWidget {
     appBar: new AppBar(
       title: Text('appbar title'),
     ),
-    body: new CustomListViewWidget(),
+    body: new CountWidget(),
   );
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'test',
       home: widget,
     );
   }
