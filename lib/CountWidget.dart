@@ -24,12 +24,22 @@ class _CountSate extends State<CountWidget>
   Widget build(BuildContext context) {
 
     return new Center(
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          new AddButtonWidget(increment: increment1),
-          new AddTextViewWidget(count: _increment),
-        ],
+      child : new SizedBox(
+        height: 100,
+        child: new Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new AddButtonWidget(increment: increment1),
+            new AddTextViewWidget(count: _increment),
+            const FlutterLogo(size: 100,),
+            new Expanded(child: const Placeholder(
+              color: Colors.blue,
+              fallbackHeight: 1,
+              fallbackWidth: 1,
+            ),)
+
+          ],
+        ),
       ),
     );
   }
