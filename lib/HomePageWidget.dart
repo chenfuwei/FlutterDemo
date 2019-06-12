@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'TextWidget.dart';
 import 'ContainerWidget.dart';
+import 'ImageWidget.dart';
+import 'PageAppBar.dart';
+import 'BottomTabBarWidget.dart';
+import 'ExpandedWidget.dart';
+import 'package:my_app/CountWidget.dart';
  List items = [
   {
     'title':"Text",
@@ -9,7 +14,27 @@ import 'ContainerWidget.dart';
   {
     'title':"Container",
     'widget':ContainerWidget()
-  }
+  },
+   {
+     'title':"Image",
+     'widget':ImageWidget()
+   },
+   {
+     'title':"Expanded",
+     'widget':ExpandedWidget()
+   },
+   {
+     'title':"Statefull 按钮计数器",
+     'widget':CountWidget()
+   },
+   {
+     'title':"TabPage AppBar",
+     'widget':AppBarBottomSample()
+   },
+   {
+     'title':"BottomTabBar",
+     'widget':BottomTabBarWidget()
+   }
 ];
 
  typedef void OnItemTap(int index);
@@ -63,7 +88,13 @@ class HomeDrawWidget extends StatelessWidget
         itemBuilder: (context, index){
           return new GestureDetector(
             child : new Container(
-                child: new Text(items[index]['title'], style: TextStyle(color: Colors.white, fontSize: 17),),
+              color: Colors.transparent,
+                child: new SizedBox(height: 40,width: double.infinity,
+                  child:new Align(
+                    alignment: Alignment.centerLeft,
+                    child:new Text(items[index]['title'], style: TextStyle(color: Colors.white, fontSize: 17),),
+                  ),
+                ),
               ),
             onTap: ()=>onItemTap(index),
           );

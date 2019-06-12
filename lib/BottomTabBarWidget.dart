@@ -44,9 +44,6 @@ class _BottomTabBarState extends State<BottomTabBarWidget>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar:  AppBar(
-        title: const Text("测试底部条"),
-      ),
       body: _widgetOptions[curSelectIndex],
       bottomNavigationBar:  BottomNavigationBar(
         items: <BottomNavigationBarItem>[
