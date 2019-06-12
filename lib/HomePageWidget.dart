@@ -6,6 +6,7 @@ import 'package:my_app/tabbar/PageAppBar.dart';
 import 'package:my_app/tabbar/BottomTabBarWidget.dart';
 import 'package:my_app/basic/ExpandedWidget.dart';
 import 'package:my_app/stateful/CountWidget.dart';
+import 'package:my_app/navigator/NavigatorHomeWidget.dart';
  List items = [
   {
     'title':"Text",
@@ -34,6 +35,10 @@ import 'package:my_app/stateful/CountWidget.dart';
    {
      'title':"BottomTabBar",
      'widget':BottomTabBarWidget()
+   },
+   {
+     'title':"Navigator",
+     'widget':NavigatorHomeWidget()
    }
 ];
 
